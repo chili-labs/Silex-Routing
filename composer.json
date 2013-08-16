@@ -1,0 +1,28 @@
+{
+    "name": "project-a/silex-routing",
+    "description": "Core Library",
+    "authors": [
+        {
+            "name": "Daniel Tschinder",
+            "email": "daniel.tschinder@project-a.com",
+            "homepage": "http://www.project-a.com",
+            "role": "Senior PHP Developer"
+        },
+        {
+            "name": "Project A",
+            "email": "info@project-a.com",
+            "homepage": "http://www.project-a.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.0",
+        "symfony/routing": ">=2.3,<2.4-dev",
+        "symfony-cmf/routing": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
+    },
+    "autoload": {
+        "psr-0": { "SilexRouting": "src/" }
+    }
+}
