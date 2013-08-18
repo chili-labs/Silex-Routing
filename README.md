@@ -29,4 +29,6 @@ To run the test suite, you need [composer](http://getcomposer.org).
 
 Silex-Routing is licensed under the MIT license.
 
-http://www.project-a.com
+## More about Project A Ventures
+
+[www.project-a.com](http://www.project-a.com/en/working-with-project-a/)
