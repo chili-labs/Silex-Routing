@@ -5,8 +5,7 @@
         {
             "name": "Daniel Tschinder",
             "email": "daniel.tschinder@project-a.com",
-            "homepage": "http://www.project-a.com",
-            "role": "Senior PHP Developer"
+            "homepage": "http://www.project-a.com"
         },
         {
             "name": "Project A",
@@ -24,5 +23,10 @@
     },
     "autoload": {
         "psr-0": { "SilexRouting": "src/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
