@@ -35,7 +35,11 @@ class RouterCollection implements \IteratorAggregate, \Countable
 
     public function __clone()
     {
-        $this->routers = clone $this->routers;
+        $routers = clone $this->routers;
+        $this->routers = new \SplObjectStorage();
+        foreach ($routers as $router) {
+            $this->routers->attach(clone $router, $routers[$router]);
+        }
     }
 
     /**
