@@ -93,8 +93,8 @@ class RouterCollection implements \IteratorAggregate, \Countable
      * Gets the priority of a router previously added.
      *
      * @param RouterInterface $router The router
-     *
      * @return int|null The priority of the router or null
+     * @throws \UnexpectedValueException
      */
     public function getPriority(RouterInterface $router)
     {
@@ -121,8 +121,6 @@ class RouterCollection implements \IteratorAggregate, \Countable
      */
     public function addCollection(RouterCollection $collection)
     {
-        // we need to remove all routes with the same names first because just replacing them
-        // would not place the new route at the end of the merged array
         foreach ($collection as $router) {
             $this->add($router, $collection->getPriority($router));
         }
