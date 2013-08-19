@@ -13,8 +13,6 @@ namespace SilexRouting\Provider;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-
-use SilexRouting\RouterCollection;
 use Symfony\Cmf\Component\Routing\ChainRouter;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 
@@ -28,16 +26,14 @@ class RoutingServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         $app['url_matcher'] = $app->share(function () use ($app) {
-            $chainRouter = new ChainRouter();
-            foreach ($app['routers'] as $router) {
-                $chainRouter->add($router, $app['routers']->getPriority($router));
-            }
+            /* @var ChainRouter $chainRouter */
+            $chainRouter = $app['routers'];
             $chainRouter->setContext($app['request_context']);
             return $chainRouter;
         });
 
         $app['routers'] = $app->share(function () {
-            return new RouterCollection();
+            return new ChainRouter();
         });
     }
 
