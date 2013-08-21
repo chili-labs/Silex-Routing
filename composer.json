@@ -1,6 +1,6 @@
 {
     "name": "project-a/silex-routing",
-    "description": "Core Library",
+    "description": "Advanced Routing for Silex",
     "authors": [
         {
             "name": "Daniel Tschinder",
