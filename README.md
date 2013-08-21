@@ -16,7 +16,7 @@ run the `php composer.phar install` command to install it:
         }
     }
 
-Alternatively, you can download the [`silexrouting.zip`][2] file and extract it. TBD
+Alternatively, you can download the [`silexrouting.zip`][1] file and extract it.
 
 ## Tests
 
@@ -32,3 +32,5 @@ Silex-Routing is licensed under the MIT license.
 ## More about Project A Ventures
 
 [www.project-a.com](http://www.project-a.com/en/working-with-project-a/)
+
+[1]: https://github.com/project-a/Silex-Routing/archive/master.zip
