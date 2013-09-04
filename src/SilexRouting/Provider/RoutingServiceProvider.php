@@ -14,7 +14,6 @@ namespace SilexRouting\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use Symfony\Cmf\Component\Routing\ChainRouter;
-use Symfony\Component\Routing\Generator\UrlGenerator;
 
 /**
  * Symfony Routing component Provider for advanced routing.

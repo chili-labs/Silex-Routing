@@ -13,7 +13,6 @@ namespace SilexRouting\Tests;
 
 use Silex\Application;
 use SilexRouting\Provider\RoutingServiceProvider;
-use SilexRouting\SilexRouter;
 
 /**
  * RouterCollection test cases.
