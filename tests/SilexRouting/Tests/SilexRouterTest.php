@@ -11,6 +11,7 @@
 
 namespace SilexRouting\Tests;
 
+use Silex\Application;
 use SilexRouting\Provider\RoutingServiceProvider;
 use SilexRouting\SilexRouter;
 use Symfony\Component\Routing\RequestContext;
