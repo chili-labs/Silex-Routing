@@ -16,7 +16,7 @@ use Silex\ServiceProviderInterface;
 use Symfony\Cmf\Component\Routing\ChainRouter;
 
 /**
- * Symfony Routing component Provider for advanced routing.
+ * SilexRouting provider for advanced routing.
  *
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
  */
