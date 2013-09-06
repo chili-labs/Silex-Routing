@@ -28,6 +28,7 @@ class RoutingServiceProvider implements ServiceProviderInterface
             /* @var ChainRouter $chainRouter */
             $chainRouter = $app['routers'];
             $chainRouter->setContext($app['request_context']);
+
             return $chainRouter;
         });
 

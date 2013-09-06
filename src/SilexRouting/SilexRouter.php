@@ -98,8 +98,8 @@ class SilexRouter implements RouterInterface
      *
      * If there is no route with the given name, the generator must throw the RouteNotFoundException.
      *
-     * @param string $name          The name of the route
-     * @param mixed $parameters    An array of parameters
+     * @param string         $name          The name of the route
+     * @param mixed          $parameters    An array of parameters
      * @param Boolean|string $referenceType The type of reference to be generated (one of the constants)
      *
      * @return string The generated URL
@@ -114,6 +114,7 @@ class SilexRouter implements RouterInterface
     public function generate($name, $parameters = array(), $referenceType = self::ABSOLUTE_PATH)
     {
         $generator = new UrlGenerator($this->getRouteCollection(), $this->getContext());
+
         return $generator->generate($name, $parameters, $referenceType);
     }
 
@@ -135,6 +136,7 @@ class SilexRouter implements RouterInterface
     public function match($pathinfo)
     {
         $matcher = new RedirectableUrlMatcher($this->getRouteCollection(), $this->getContext());
+
         return $matcher->match($pathinfo);
     }
 }

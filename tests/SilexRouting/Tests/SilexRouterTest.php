@@ -24,7 +24,7 @@ use Symfony\Component\Routing\RequestContext;
 class SilexRouterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @param RequestContext $context
+     * @param  RequestContext $context
      * @return SilexRouter
      */
     protected function getRouter(RequestContext $context)

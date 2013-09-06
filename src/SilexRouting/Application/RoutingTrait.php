@@ -33,6 +33,7 @@ trait RoutingTrait
         /* @var Application $this */
         $this['routers'] = $this->share($this->extend('routers', function (ChainRouter $chainRouter) use ($router, $priority) {
             $chainRouter->add($router, $priority);
+
             return $chainRouter;
         }));
     }

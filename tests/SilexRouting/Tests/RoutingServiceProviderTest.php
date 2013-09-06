@@ -28,6 +28,7 @@ class RoutingServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
         $app->register(new RoutingServiceProvider());
+
         return $app;
     }
 
