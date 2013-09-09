@@ -11,10 +11,9 @@
 
 namespace SilexRouting\Tests;
 
-use Silex\Application as SilexApplication;
-use SilexRouting\Application\RoutingTrait;
 use SilexRouting\Provider\RoutingServiceProvider;
 use SilexRouting\SilexRouter;
+use SilexRouting\Tests\TestData\Application;
 
 /**
  * RouterCollection test cases.
@@ -36,6 +35,9 @@ class RoutingTraitTest extends \PHPUnit_Framework_TestCase
 
     public function testTraitAddsRouter()
     {
+        if (version_compare(PHP_VERSION, '5.4', 'lt')) {
+            $this->markTestSkipped('Skipping; PHP 5.4 or greater is needed');
+        }
         $app = $this->getApp();
         $app->addRouter(new SilexRouter($app));
         $this->assertCount(1, $app['routers']->all());
@@ -46,6 +48,9 @@ class RoutingTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testTraitContainsCorrectRouter()
     {
+        if (version_compare(PHP_VERSION, '5.4', 'lt')) {
+            $this->markTestSkipped('Skipping; PHP 5.4 or greater is needed');
+        }
         $app = $this->getApp();
         $router = new SilexRouter($app);
 
@@ -53,9 +58,4 @@ class RoutingTraitTest extends \PHPUnit_Framework_TestCase
         $arrayOfRouters = $app['routers']->all();
         $this->assertSame($router, $arrayOfRouters[0]);
     }
-}
-
-class Application extends SilexApplication
-{
-    use RoutingTrait;
 }
