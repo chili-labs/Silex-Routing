@@ -1,7 +1,7 @@
 Silex-Routing, advanced routing for Silex
 =============================
 
-[![Build Status](https://secure.travis-ci.org/project-a/Silex-Routing.png?branch=master)](http://travis-ci.org/project-a/Silex-Routing)
+[![Latest Stable Version](https://poser.pugx.org/project-a/Silex-Routing/v/stable.png)](https://packagist.org/packages/project-a/Silex-Routing) [![Total Downloads](https://poser.pugx.org/project-a/Silex-Routing/downloads.png)](https://packagist.org/packages/project-a/Silex-Routing) [![Build Status](https://secure.travis-ci.org/project-a/Silex-Routing.png?branch=master)](http://travis-ci.org/project-a/Silex-Routing)
 
 
 ## Installation
