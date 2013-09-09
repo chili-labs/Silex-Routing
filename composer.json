@@ -1,6 +1,7 @@
 {
     "name": "project-a/silex-routing",
     "description": "Advanced Routing for Silex",
+    "license": "MIT",
     "authors": [
         {
             "name": "Daniel Tschinder",
