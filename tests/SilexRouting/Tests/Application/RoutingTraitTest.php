@@ -16,8 +16,6 @@ use SilexRouting\SilexRouter;
 use SilexRouting\Tests\TestData\Application;
 
 /**
- * RouterCollection test cases.
- *
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
  */
 class RoutingTraitTest extends \PHPUnit_Framework_TestCase
@@ -33,11 +31,11 @@ class RoutingTraitTest extends \PHPUnit_Framework_TestCase
         return $app;
     }
 
+    /**
+     * @requires PHP 5.4
+     */
     public function testTraitAddsRouter()
     {
-        if (version_compare(PHP_VERSION, '5.4', 'lt')) {
-            $this->markTestSkipped('Skipping; PHP 5.4 or greater is needed');
-        }
         $app = $this->getApp();
         $app->addRouter(new SilexRouter($app));
         $this->assertCount(1, $app['routers']->all());
@@ -45,12 +43,10 @@ class RoutingTraitTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @depends testTraitAddsRouter
+     * @requires PHP 5.4
      */
     public function testTraitContainsCorrectRouter()
     {
-        if (version_compare(PHP_VERSION, '5.4', 'lt')) {
-            $this->markTestSkipped('Skipping; PHP 5.4 or greater is needed');
-        }
         $app = $this->getApp();
         $router = new SilexRouter($app);
 
