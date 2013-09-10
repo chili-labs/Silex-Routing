@@ -7,14 +7,19 @@ env:
 before_script:
     # symfony/*
     - composer self-update
-    # - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.4' ]; then sed -i 's/>=2.3,<2.5-dev/2.4.*@dev/g' composer.json; composer update --dev --prefer-source; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/>=2.3,<2.5-dev/2.3.*@dev/g' composer.json; composer update --dev --prefer-source; fi"
+    # - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.4' ]; then sed -i 's/>=2.3,<2.5-dev/2.4.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/>=2.3,<2.5-dev/2.3.*@dev/g' composer.json; fi"
+    - composer update --prefer-source
 
-script: vendor/bin/phpunit
+script:
+    - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+    - php vendor/bin/coveralls -v
 
 php:
-  - 5.3.3
-  - 5.3
-  - 5.4
-  - 5.5
+    - 5.3.3
+    - 5.3
+    - 5.4
+    - 5.5
 
