@@ -17,8 +17,6 @@ use SilexRouting\SilexRouter;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * RouterCollection test cases.
- *
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
  */
 class SilexRouterTest extends \PHPUnit_Framework_TestCase
@@ -31,8 +29,8 @@ class SilexRouterTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
         $app->register(new RoutingServiceProvider());
-        $app->get('/hello', function(){});
-        $app->get('/hello2', function(){});
+        $app->get('/hello', 'test')->bind('hello1');
+        $app->get('/hello2', 'test')->bind('hello2');
         $app->flush();
 
         $app['request_context'] = $context;
@@ -66,5 +64,26 @@ class SilexRouterTest extends \PHPUnit_Framework_TestCase
         $router = $this->getRouter($context);
 
         $this->assertCount(2, $router->getRouteCollection());
+    }
+
+    public function testUrlGenerationReturnsCorrectUrl()
+    {
+        $context = new RequestContext();
+        $router = $this->getRouter($context);
+
+        $this->assertEquals('/hello', $router->generate('hello1'));
+    }
+
+    public function testUrlMatchingMatches()
+    {
+        $context = new RequestContext();
+        $router = $this->getRouter($context);
+
+        $expected = array(
+            '_controller' => 'test',
+            '_route' => 'hello1'
+        );
+
+        $this->assertEquals($expected, $router->match('/hello'));
     }
 }

@@ -50,11 +50,7 @@ class SilexRouter implements RouterInterface
     }
 
     /**
-     * Sets the request context.
-     *
-     * @param RequestContext $context The context
-     *
-     * @api
+     * {@inheritdoc}
      */
     public function setContext(RequestContext $context)
     {
@@ -62,11 +58,7 @@ class SilexRouter implements RouterInterface
     }
 
     /**
-     * Gets the request context.
-     *
-     * @return RequestContext The context
-     *
-     * @api
+     * {@inheritdoc}
      */
     public function getContext()
     {
@@ -74,9 +66,7 @@ class SilexRouter implements RouterInterface
     }
 
     /**
-     * Gets the RouteCollection instance associated with this Router.
-     *
-     * @return RouteCollection A RouteCollection instance
+     * {@inheritdoc}
      */
     public function getRouteCollection()
     {
@@ -84,32 +74,7 @@ class SilexRouter implements RouterInterface
     }
 
     /**
-     * Generates a URL or path for a specific route based on the given parameters.
-     *
-     * Parameters that reference placeholders in the route pattern will substitute them in the
-     * path or host. Extra params are added as query string to the URL.
-     *
-     * When the passed reference type cannot be generated for the route because it requires a different
-     * host or scheme than the current one, the method will return a more comprehensive reference
-     * that includes the required params. For example, when you call this method with $referenceType = ABSOLUTE_PATH
-     * but the route requires the https scheme whereas the current scheme is http, it will instead return an
-     * ABSOLUTE_URL with the https scheme and the current host. This makes sure the generated URL matches
-     * the route in any case.
-     *
-     * If there is no route with the given name, the generator must throw the RouteNotFoundException.
-     *
-     * @param string         $name          The name of the route
-     * @param mixed          $parameters    An array of parameters
-     * @param Boolean|string $referenceType The type of reference to be generated (one of the constants)
-     *
-     * @return string The generated URL
-     *
-     * @throws RouteNotFoundException              If the named route doesn't exist
-     * @throws MissingMandatoryParametersException When some parameters are missing that are mandatory for the route
-     * @throws InvalidParameterException           When a parameter value for a placeholder is not correct because
-     *                                             it does not match the requirement
-     *
-     * @api
+     * {@inheritdoc}
      */
     public function generate($name, $parameters = array(), $referenceType = self::ABSOLUTE_PATH)
     {
@@ -119,19 +84,7 @@ class SilexRouter implements RouterInterface
     }
 
     /**
-     * Tries to match a URL path with a set of routes.
-     *
-     * If the matcher can not find information, it must throw one of the exceptions documented
-     * below.
-     *
-     * @param string $pathinfo The path info to be parsed (raw format, i.e. not urldecoded)
-     *
-     * @return array An array of parameters
-     *
-     * @throws ResourceNotFoundException If the resource could not be found
-     * @throws MethodNotAllowedException If the resource was found but the request method is not allowed
-     *
-     * @api
+     * {@inheritdoc}
      */
     public function match($pathinfo)
     {
