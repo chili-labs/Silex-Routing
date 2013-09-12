@@ -79,10 +79,10 @@ class SilexRouterTest extends \PHPUnit_Framework_TestCase
         $context = new RequestContext();
         $router = $this->getRouter($context);
 
-        $expected = [
+        $expected = array(
             '_controller' => 'test',
             '_route' => 'hello1'
-        ];
+        );
 
         $this->assertEquals($expected, $router->match('/hello'));
     }
