@@ -15,8 +15,6 @@ use Silex\Application;
 use SilexRouting\Provider\RoutingServiceProvider;
 
 /**
- * RouterCollection test cases.
- *
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
  */
 class RoutingServiceProviderTest extends \PHPUnit_Framework_TestCase
@@ -44,12 +42,18 @@ class RoutingServiceProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Symfony\Cmf\Component\Routing\ChainRouter', $app['routers']);
     }
 
+    /**
+     * @depends testUrlMatcherReturnsChainRouter
+     */
     public function testUrlMatcherReturnsEmptyChainRouterByDefault()
     {
         $app = $this->getApp();
         $this->assertCount(0, $app['url_matcher']->all());
     }
 
+    /**
+     * @depends testRoutersReturnsChainRouter
+     */
     public function testRoutersReturnsEmptyChainRouterByDefault()
     {
         $app = $this->getApp();
