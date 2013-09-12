@@ -22,6 +22,9 @@ use Symfony\Cmf\Component\Routing\ChainRouter;
  */
 class RoutingServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function register(Application $app)
     {
         $app['url_matcher'] = $app->share(function () use ($app) {

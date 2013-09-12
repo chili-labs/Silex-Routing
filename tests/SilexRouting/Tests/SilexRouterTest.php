@@ -17,8 +17,6 @@ use SilexRouting\SilexRouter;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * RouterCollection test cases.
- *
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
  */
 class SilexRouterTest extends \PHPUnit_Framework_TestCase
