@@ -14,8 +14,6 @@ namespace SilexRouting\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
-use Symfony\Component\Routing\Generator\UrlGenerator;
-
 /**
  * Symfony CMF Routing component Provider for URL generation.
  *
