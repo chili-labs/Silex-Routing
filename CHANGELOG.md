@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.1
+------------
+
+* **2013-10-30**: Use stable 1.1 version of symfony-cmf/Routing
+
+
 1.0.0
 ------------
 
