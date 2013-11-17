@@ -35,8 +35,8 @@ class RoutingServiceProvider implements ServiceProviderInterface
             return $chainRouter;
         });
 
-        $app['routers'] = $app->share(function () {
-            return new ChainRouter();
+        $app['routers'] = $app->share(function () use ($app) {
+            return new ChainRouter($app['logger']);
         });
     }
 

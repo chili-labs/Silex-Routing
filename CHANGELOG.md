@@ -7,6 +7,12 @@ Changelog
 *
 
 
+1.0.2
+------------
+
+* **2013-11-17**: Add logger to ChainRouter for logging routing information
+
+
 1.0.1
 ------------
 
