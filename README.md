@@ -5,9 +5,13 @@ Silex-Routing, advanced routing for Silex
 
 ## Description
 
-Silex-Routing allows you to define custom and multiple routers for Silex which 
-then are used for matching and generating urls.
-This advanced routing is achieve by connecting Silex with symfony-cmf/Routing.
+Silex-Routing allows you to define custom and multiple routers for Silex. This is 
+especially useful when working with dynmaic routes, which are not known while 
+writting the code (e.g. URLs stored in database).
+
+This implementation works for both, matching and generating of URLs.
+
+The advanced routing is achieve by connecting Silex with symfony-cmf/Routing.
 
 ## Installation
 
