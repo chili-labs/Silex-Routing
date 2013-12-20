@@ -5,9 +5,11 @@ env:
     - SYMFONY_VERSION=2.4
 
 before_script:
-    - sed -i "s/>=2.3,<2.5-dev/~${SYMFONY_VERSION}.0/g" composer.json
     - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
     - composer install
+    
+install:
+    - composer require symfony/symfony:~${SYMFONY_VERSION}.0 --no-update
 
 script:
     - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
