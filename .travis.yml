@@ -1,16 +1,13 @@
 language: php
 
 env:
-    - SYMFONY_DEPS_VERSION=2.3
-    # - SYMFONY_DEPS_VERSION=2.4
+    - SYMFONY_VERSION=2.3
+    - SYMFONY_VERSION=2.4
 
 before_script:
-    # symfony/*
-    - composer self-update
-    # - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.4' ]; then sed -i 's/>=2.3,<2.5-dev/2.4.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/>=2.3,<2.5-dev/2.3.*@dev/g' composer.json; fi"
+    - sed -i "s/>=2.3,<2.5-dev/~${SYMFONY_VERSION}.0/g" composer.json
     - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
-    - composer update --prefer-source
+    - composer install
 
 script:
     - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
@@ -19,7 +16,7 @@ after_script:
     - php vendor/bin/coveralls -v
 
 php:
-    - 5.3.3
     - 5.3
     - 5.4
     - 5.5
+    - hhvm
