@@ -70,6 +70,3 @@ Silex-Routing is licensed under the MIT license.
 
 [1]: https://github.com/project-a/Silex-Routing/archive/master.zip
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/project-a/silex-routing/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
