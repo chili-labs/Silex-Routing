@@ -11,7 +11,6 @@
 
 namespace SilexRouting\Application;
 
-use Silex\Application;
 use Symfony\Cmf\Component\Routing\ChainRouter;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -30,7 +29,7 @@ trait RoutingTrait
      */
     public function addRouter(RouterInterface $router, $priority = 0)
     {
-        /* @var Application $this */
+        /* @var \Pimple $this */
         $this['routers'] = $this->share($this->extend('routers', function (ChainRouter $chainRouter) use ($router, $priority) {
             $chainRouter->add($router, $priority);
 
