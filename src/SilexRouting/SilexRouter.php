@@ -12,7 +12,6 @@
 namespace SilexRouting;
 
 use Psr\Log\LoggerInterface;
-use Silex\Application;
 use Silex\RedirectableUrlMatcher;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\RequestContext;
@@ -27,7 +26,7 @@ use Symfony\Component\Routing\RouterInterface;
 class SilexRouter implements RouterInterface
 {
     /**
-     * @var Application
+     * @var \Pimple
      */
     protected $app;
 
@@ -42,10 +41,10 @@ class SilexRouter implements RouterInterface
     protected $logger;
 
     /**
-     * @param Application $app
+     * @param \Pimple         $app
      * @param LoggerInterface $logger
      */
-    public function __construct(Application $app, LoggerInterface $logger = null)
+    public function __construct(\Pimple $app, LoggerInterface $logger = null)
     {
         $this->app = $app;
         $this->logger = $logger;
