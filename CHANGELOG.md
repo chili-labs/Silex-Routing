@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.3
+------------
+
+* **2014-01-23**: Supply logger to UrlGenerator
+* **2014-01-23**: Loosen typehint from \Silex\Application to \Pimple where possible
+
+
 1.0.2
 ------------
 
