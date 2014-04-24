@@ -16,8 +16,8 @@
     ],
     "require": {
         "silex/silex": "~1.0",
-        "symfony/routing": ">=2.3,<2.5-dev",
-        "symfony-cmf/routing": "~1.1.0"
+        "symfony/routing": ">=2.3,<2.6-dev",
+        "symfony-cmf/routing": "~1.1"
     },
     "require-dev": {
         "satooshi/php-coveralls": "*"
