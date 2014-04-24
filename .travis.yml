@@ -3,13 +3,14 @@ language: php
 env:
     - SYMFONY_VERSION=2.3
     - SYMFONY_VERSION=2.4
+    - SYMFONY_VERSION=2.5
 
 before_script:
     - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
-    - composer install
+    - composer install --prefer-source
 
 install:
-    - composer require symfony/symfony:~${SYMFONY_VERSION}.0 --no-update
+    - composer require symfony/symfony:${SYMFONY_VERSION}.*@dev --no-update
 
 script:
     - phpunit --coverage-clover build/logs/clover.xml
