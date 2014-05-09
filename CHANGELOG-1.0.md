@@ -1,10 +1,10 @@
-Changelog
+Changelog for 1.0
 =========
 
 1.0.4
 ------------
 
-* **2014-04-24**: Support Symfony 2.5 and Symfony-CMF 1.2 
+* **2014-04-24**: Support Symfony 2.5 and Symfony-CMF 1.2
 
 
 1.0.3

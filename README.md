@@ -58,7 +58,7 @@ Your custom routers will not be used!*
 To run the test suite, you need [composer](http://getcomposer.org).
 
     $ php composer.phar install --dev
-    $ vendor/bin/phpunit
+    $ phpunit
 
 ## License
 
