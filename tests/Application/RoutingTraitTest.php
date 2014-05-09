@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting\Tests;
+namespace ProjectA\Silex\Tests\Application;
 
-use SilexRouting\Provider\RoutingServiceProvider;
-use SilexRouting\SilexRouter;
-use SilexRouting\Tests\TestData\Application;
+use ProjectA\Silex\Provider\RoutingServiceProvider;
+use ProjectA\Silex\Routing\SilexRouter;
+use ProjectA\Silex\Tests\TestData\Application;
 
 /**
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>

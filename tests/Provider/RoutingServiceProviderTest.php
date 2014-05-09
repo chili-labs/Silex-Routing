@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting\Tests;
+namespace ProjectA\Silex\Tests\Provider;
 
+use ProjectA\Silex\Provider\RoutingServiceProvider;
 use Silex\Application;
-use SilexRouting\Provider\RoutingServiceProvider;
 
 /**
  * @author Daniel Tschinder <daniel.tschinder@project-a.com>
@@ -58,5 +58,21 @@ class RoutingServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $app = $this->getApp();
         $this->assertCount(0, $app['routers']->all());
+    }
+
+
+    public function testUrlGeneratorReturnsChainRouter()
+    {
+        $app = $this->getApp();
+        $this->assertInstanceOf('Symfony\Cmf\Component\Routing\ChainRouter', $app['url_generator']);
+    }
+
+    /**
+     * @depends testUrlGeneratorReturnsChainRouter
+     */
+    public function testUrlGeneratorReturnsEmptyChainRouterByDefault()
+    {
+        $app = $this->getApp();
+        $this->assertCount(0, $app['url_generator']->all());
     }
 }

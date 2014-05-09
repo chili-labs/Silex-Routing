@@ -1,4 +1,4 @@
 <?php
 
 $loader = require __DIR__.'/../vendor/autoload.php';
-$loader->add('SilexRouting\Tests', __DIR__);
+$loader->addPsr4('ProjectA\\Silex\\Tests\\', __DIR__);

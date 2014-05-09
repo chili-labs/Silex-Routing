@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "silex/silex": "~1.0",
+        "silex/silex": "~2.0@dev",
+        "pimple/pimple": "~2.1@dev",
         "symfony/routing": ">=2.3,<2.6-dev",
         "symfony-cmf/routing": "~1.1"
     },
@@ -23,11 +24,11 @@
         "satooshi/php-coveralls": "*"
     },
     "autoload": {
-        "psr-0": { "SilexRouting": "src/" }
+        "psr-4": { "ProjectA\\Silex\\": "src/" }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 }

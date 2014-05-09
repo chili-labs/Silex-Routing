@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting\Tests;
+namespace ProjectA\Silex\Tests\Routing;
 
+use ProjectA\Silex\Provider\RoutingServiceProvider;
+use ProjectA\Silex\Routing\SilexRouter;
 use Silex\Application;
-use SilexRouting\Provider\RoutingServiceProvider;
-use SilexRouting\SilexRouter;
 use Symfony\Component\Routing\RequestContext;
 
 /**

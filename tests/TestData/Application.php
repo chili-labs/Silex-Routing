@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting\Tests\TestData;
+namespace ProjectA\Silex\Tests\TestData;
 
+use ProjectA\Silex\Application\RoutingTrait;
 use Silex\Application as SilexApplication;
-use SilexRouting\Application\RoutingTrait;
 
 class Application extends SilexApplication
 {

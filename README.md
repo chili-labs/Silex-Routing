@@ -6,7 +6,7 @@
 ## Description
 
 Silex-Routing allows you to define custom and multiple routers for Silex. This is
-especially useful when working with dynamic routes, which are not known while 
+especially useful when working with dynamic routes, which are not known while
 writing the code (e.g. URLs stored in database).
 
 This implementation works for both, matching and generating of URLs.
@@ -21,37 +21,42 @@ run the `php composer.phar install` command to install it:
 
     {
         "require": {
-            "project-a/silex-routing": "~1.0"
+            "project-a/silex-routing": "dev-master"
         }
     }
 
 Alternatively, you can download the [`silexrouting.zip`][1] file and extract it.
 
+#### Upgrade from 1.0 to 2.0
+
+***Please be aware that version 2.0 is still experimental and subject to change as
+long as Silex 2.0 is not stable.***
+
+Version 2 is not backward compatible with version 1. Make sure to carefully read
+the [upgrade instructions][2].
+
 ## Usage
 
 Using Silex-Routing is very simple. All you need to do is register the provided
-```RoutingServiceProvider``` and afterwards add all your custom routers (```RouterInterface```).
+```RoutingServiceProvider``` and afterwards add all your custom routers
+(```RouterInterface```).
+
 ```php
-$app = new Silex\Application();
+$app = new \Silex\Application();
+$app->register(new \ProjectA\Silex\Provider\RoutingServiceProvider());
 
-$app->register(new SilexRouting\Provider\RoutingServiceProvider());
-
-$router = new SilexRouting\SilexRouter($app); // e.g. The default Silex router
-
+$router2 = new \Acme\Silex\MySpecialRouter();
 $app['routers']->add($router);
-$app['routers']->add($router2);
 ...
 ```
 
-If you want to use url generation simple register the ```UrlGeneratorServiceProvider```
-from this package and [use generation as before](http://silex.sensiolabs.org/doc/providers/url_generator.html#usage).
+There is a router in this repository named ```SilexRouter```, that handles the
+default routing behavior of Silex. Registering this router ensures, that all
+routes added through the main Silex application still work. (This router is not
+registered by default.)
 
-```php
-$app->register(new SilexRouting\Provider\UrlGeneratorServiceProvider());
-```
-
-*Do not use the Silex\Provider\UrlGeneratorServiceProvider together with Silex-Routing.
-Your custom routers will not be used!*
+*Since version 2.0 of **project-a/silex-routing** the url generation is included in the ```RoutingServiceProvider``` and
+no special ```UrlGeneratorServiceProvider``` is needed anymore.*
 
 ## Tests
 
@@ -69,3 +74,4 @@ Silex-Routing is licensed under the MIT license.
 [www.project-a.com](http://www.project-a.com/en/working-with-project-a/)
 
 [1]: https://github.com/project-a/Silex-Routing/archive/master.zip
+[2]: https://github.com/project-a/Silex-Routing/blob/master/UPGRADE-2.0.md

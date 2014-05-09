@@ -9,10 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting;
+namespace ProjectA\Silex\Routing;
 
+use Pimple\Container;
 use Psr\Log\LoggerInterface;
-use Silex\RedirectableUrlMatcher;
+use Silex\Provider\Routing\RedirectableUrlMatcher;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouterInterface;
@@ -26,9 +27,9 @@ use Symfony\Component\Routing\RouterInterface;
 class SilexRouter implements RouterInterface
 {
     /**
-     * @var \Pimple
+     * @var Container
      */
-    protected $app;
+    protected $pimple;
 
     /**
      * @var RequestContext
@@ -36,17 +37,17 @@ class SilexRouter implements RouterInterface
     protected $context;
 
     /**
-     * @var \Psr\Log\LoggerInterface
+     * @var LoggerInterface
      */
     protected $logger;
 
     /**
-     * @param \Pimple         $app
+     * @param Container       $pimple
      * @param LoggerInterface $logger
      */
-    public function __construct(\Pimple $app, LoggerInterface $logger = null)
+    public function __construct(Container $pimple, LoggerInterface $logger = null)
     {
-        $this->app = $app;
+        $this->pimple = $pimple;
         $this->logger = $logger;
     }
 
@@ -63,7 +64,7 @@ class SilexRouter implements RouterInterface
      */
     public function getContext()
     {
-        return ($this->context)?: $this->app['request_context'];
+        return $this->context ? : $this->pimple['request_context'];
     }
 
     /**
@@ -71,7 +72,7 @@ class SilexRouter implements RouterInterface
      */
     public function getRouteCollection()
     {
-        return $this->app['routes'];
+        return $this->pimple['routes'];
     }
 
     /**

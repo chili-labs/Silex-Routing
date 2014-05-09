@@ -14,7 +14,7 @@
 >
     <testsuites>
         <testsuite name="Silex-Routing Test Suite">
-            <directory>./tests/SilexRouting/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
     <filter>

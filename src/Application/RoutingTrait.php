@@ -9,8 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace SilexRouting\Application;
+namespace ProjectA\Silex\Application;
 
+use Pimple\Container;
 use Symfony\Cmf\Component\Routing\ChainRouter;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -29,11 +30,11 @@ trait RoutingTrait
      */
     public function addRouter(RouterInterface $router, $priority = 0)
     {
-        /* @var \Pimple $this */
-        $this['routers'] = $this->share($this->extend('routers', function (ChainRouter $chainRouter) use ($router, $priority) {
+        /* @var Container $this */
+        $this->extend('routers', function (ChainRouter $chainRouter) use ($router, $priority) {
             $chainRouter->add($router, $priority);
 
             return $chainRouter;
-        }));
+        });
     }
 }
