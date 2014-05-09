@@ -3,7 +3,7 @@
 ### New Dependencies
 
 * Updated to work only with Silex 2.0 or later and as a consequence only Pimple
-2.1 or later will work.
+2.1+ and Symfony 2.4+ will work.
 
 ### Changes
 
