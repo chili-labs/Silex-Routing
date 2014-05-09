@@ -11,7 +11,6 @@
 
 namespace ProjectA\Silex\Application;
 
-use Pimple\Container;
 use Symfony\Cmf\Component\Routing\ChainRouter;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -30,7 +29,7 @@ trait RoutingTrait
      */
     public function addRouter(RouterInterface $router, $priority = 0)
     {
-        /* @var Container $this */
+        /* @var \Pimple\Container $this */
         $this->extend('routers', function (ChainRouter $chainRouter) use ($router, $priority) {
             $chainRouter->add($router, $priority);
 
