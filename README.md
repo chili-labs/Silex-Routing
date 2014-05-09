@@ -55,7 +55,7 @@ default routing behavior of Silex. Registering this router ensures, that all
 routes added through the main Silex application still work. (This router is not
 registered by default.)
 
-*Since version 2.0 of **project-a/silex-routing** the url generation is included in the ```RoutingServiceProvider``` and
+*Since version 2.0 of project-a/silex-routing the url generation is included in the ```RoutingServiceProvider``` and
 no special ```UrlGeneratorServiceProvider``` is needed anymore.*
 
 ## Tests
