@@ -5,9 +5,9 @@
 
 ## Description
 
-Silex-Routing allows you to define custom and multiple routers for Silex. This is 
-especially useful when working with dynmaic routes, which are not known while 
-writting the code (e.g. URLs stored in database).
+Silex-Routing allows you to define custom and multiple routers for Silex. This is
+especially useful when working with dynamic routes, which are not known while 
+writing the code (e.g. URLs stored in database).
 
 This implementation works for both, matching and generating of URLs.
 
@@ -58,7 +58,7 @@ Your custom routers will not be used!*
 To run the test suite, you need [composer](http://getcomposer.org).
 
     $ php composer.phar install --dev
-    $ vendor/bin/phpunit
+    $ phpunit
 
 ## License
 
@@ -69,4 +69,3 @@ Silex-Routing is licensed under the MIT license.
 [www.project-a.com](http://www.project-a.com/en/working-with-project-a/)
 
 [1]: https://github.com/project-a/Silex-Routing/archive/master.zip
-
