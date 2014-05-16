@@ -60,7 +60,6 @@ class RoutingServiceProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertCount(0, $app['routers']->all());
     }
 
-
     public function testUrlGeneratorReturnsChainRouter()
     {
         $app = $this->getApp();
