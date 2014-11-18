@@ -5,13 +5,8 @@
     "authors": [
         {
             "name": "Daniel Tschinder",
-            "email": "daniel.tschinder@project-a.com",
-            "homepage": "http://www.project-a.com"
-        },
-        {
-            "name": "Project A",
-            "email": "info@project-a.com",
-            "homepage": "http://www.project-a.com"
+            "email": "daniel@tschinder.de",
+            "homepage": "http://www.tschinder.de"
         }
     ],
     "require": {

@@ -1,10 +1,11 @@
 Changelog for 1.0
 =========
 
-1.1.0
+1.0.5
 ------------
 
-* n/a
+* **2014-11-18**: Support Symfony-CMF 1.0 again
+* **2014-11-18**: Update copyright
 
 
 1.0.4
