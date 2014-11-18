@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Routing;
+namespace ChiliLabs\Silex\Routing;
 
 use Pimple\Container;
 use Psr\Log\LoggerInterface;

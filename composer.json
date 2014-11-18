@@ -18,7 +18,7 @@
         "satooshi/php-coveralls": "*"
     },
     "autoload": {
-        "psr-4": { "ProjectA\\Silex\\": "src/" }
+        "psr-4": { "ChiliLabs\\Silex\\": "src/" }
     },
     "extra": {
         "branch-alias": {

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Provider;
+namespace ChiliLabs\Silex\Provider;
 
 use Pimple\Container;
 use Silex\Application;

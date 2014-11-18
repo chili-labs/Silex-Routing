@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Tests\Routing;
+namespace ChiliLabs\Silex\Tests\Routing;
 
-use ProjectA\Silex\Provider\RoutingServiceProvider;
-use ProjectA\Silex\Routing\SilexRouter;
+use ChiliLabs\Silex\Provider\RoutingServiceProvider;
+use ChiliLabs\Silex\Routing\SilexRouter;
 use Silex\Application;
 use Symfony\Component\Routing\RequestContext;
 

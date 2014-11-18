@@ -7,8 +7,8 @@
 
 ### Changes
 
-* Namespace changed from *\SilexRouting* to *\ProjectA\Silex* for all classes
-* Class ```SilexRouter``` moved to sub-namespace *\ProjectA\Silex\Routing*
+* Namespace changed from *\SilexRouting* to *\ChiliLabs\Silex* for all classes
+* Class ```SilexRouter``` moved to sub-namespace *\ChiliLabs\Silex\Routing*
 * Class ```UrlGeneratorServiceProvider``` does not exist anymore and was merged
   into ```RoutingServiceProvider```
 * Autoloading now complies with PSR-4 standard. (Make sure your version of

@@ -43,7 +43,7 @@ Using Silex-Routing is very simple. All you need to do is register the provided
 
 ```php
 $app = new \Silex\Application();
-$app->register(new \ProjectA\Silex\Provider\RoutingServiceProvider());
+$app->register(new \ChiliLabs\Silex\Provider\RoutingServiceProvider());
 
 $router2 = new \Acme\Silex\MySpecialRouter();
 $app['routers']->add($router);

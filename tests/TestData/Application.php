@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Tests\TestData;
+namespace ChiliLabs\Silex\Tests\TestData;
 
-use ProjectA\Silex\Application\RoutingTrait;
+use ChiliLabs\Silex\Application\RoutingTrait;
 use Silex\Application as SilexApplication;
 
 /**

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Application;
+namespace ChiliLabs\Silex\Application;
 
 use Symfony\Component\Routing\RouterInterface;
 

@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Tests\Application;
+namespace ChiliLabs\Silex\Tests\Application;
 
-use ProjectA\Silex\Provider\RoutingServiceProvider;
-use ProjectA\Silex\Routing\SilexRouter;
-use ProjectA\Silex\Tests\TestData\Application;
+use ChiliLabs\Silex\Provider\RoutingServiceProvider;
+use ChiliLabs\Silex\Routing\SilexRouter;
+use ChiliLabs\Silex\Tests\TestData\Application;
 
 /**
  * @author Daniel Tschinder <daniel@tschinder.de>

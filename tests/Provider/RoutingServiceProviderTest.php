@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace ProjectA\Silex\Tests\Provider;
+namespace ChiliLabs\Silex\Tests\Provider;
 
-use ProjectA\Silex\Provider\RoutingServiceProvider;
+use ChiliLabs\Silex\Provider\RoutingServiceProvider;
 use Silex\Application;
 
 /**
