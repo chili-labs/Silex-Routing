@@ -5,6 +5,7 @@ Changelog for 1.0
 ------------
 
 * **2014-11-18**: Support Symfony-CMF 1.0 again
+* **2014-11-18**: Update copyright
 
 
 1.0.4

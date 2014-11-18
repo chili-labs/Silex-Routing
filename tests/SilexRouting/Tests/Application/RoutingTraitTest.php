@@ -3,7 +3,7 @@
 /*
  * This file is part of the SilexRouting extension.
  *
- * (c) Project A Ventures GmbH & Co. KG
+ * (c) Daniel Tschinder
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,7 +16,7 @@ use SilexRouting\SilexRouter;
 use SilexRouting\Tests\TestData\Application;
 
 /**
- * @author Daniel Tschinder <daniel.tschinder@project-a.com>
+ * @author Daniel Tschinder <daniel@tschinder.de>
  */
 class RoutingTraitTest extends \PHPUnit_Framework_TestCase
 {

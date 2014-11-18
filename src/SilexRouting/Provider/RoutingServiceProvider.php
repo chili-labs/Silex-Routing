@@ -3,7 +3,7 @@
 /*
  * This file is part of the SilexRouting extension.
  *
- * (c) Project A Ventures GmbH & Co. KG
+ * (c) Daniel Tschinder
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,7 +18,7 @@ use Symfony\Cmf\Component\Routing\ChainRouter;
 /**
  * SilexRouting provider for advanced routing.
  *
- * @author Daniel Tschinder <daniel.tschinder@project-a.com>
+ * @author Daniel Tschinder <daniel@tschinder.de>
  */
 class RoutingServiceProvider implements ServiceProviderInterface
 {
