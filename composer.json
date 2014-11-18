@@ -5,19 +5,14 @@
     "authors": [
         {
             "name": "Daniel Tschinder",
-            "email": "daniel.tschinder@project-a.com",
-            "homepage": "http://www.project-a.com"
-        },
-        {
-            "name": "Project A",
-            "email": "info@project-a.com",
-            "homepage": "http://www.project-a.com"
+            "email": "daniel@tschinder.de",
+            "homepage": "http://www.tschinder.de"
         }
     ],
     "require": {
         "silex/silex": "~1.0",
         "symfony/routing": ">=2.3,<2.6-dev",
-        "symfony-cmf/routing": "~1.1"
+        "symfony-cmf/routing": "~1.0"
     },
     "require-dev": {
         "satooshi/php-coveralls": "*"
@@ -27,7 +22,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 }
