@@ -11,7 +11,7 @@ writing the code (e.g. URLs stored in database).
 
 This implementation works for both, matching and generating of URLs.
 
-The advanced routing is achieve by connecting Silex with symfony-cmf/Routing.
+The advanced routing is achieved by connecting Silex with symfony-cmf/Routing.
 
 ## Installation
 
