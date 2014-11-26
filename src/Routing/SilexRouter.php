@@ -64,7 +64,7 @@ class SilexRouter implements RouterInterface
      */
     public function getContext()
     {
-        return $this->context ? : $this->pimple['request_context'];
+        return $this->context ?: $this->pimple['request_context'];
     }
 
     /**
