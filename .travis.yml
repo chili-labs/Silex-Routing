@@ -10,7 +10,7 @@ php:
 before_install:
     - composer require satooshi/php-coveralls --no-update
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.7' ]; then sed -i 's/~2.3/2.7.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3/2.6.*@dev/g' composer.json; fi"
+#    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3/2.6.*@dev/g' composer.json; fi"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.5' ]; then sed -i 's/~2.3/2.5.*@dev/g' composer.json; fi"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.4' ]; then sed -i 's/~2.3/2.4.*@dev/g' composer.json; fi"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/~2.3/2.3.*@dev/g' composer.json; fi"
@@ -18,8 +18,8 @@ before_install:
 install:
     - composer install --prefer-source
 
-before_script:
-    - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
+#before_script:
+#    - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
 
 script:
     - phpunit --coverage-clover build/logs/clover.xml
