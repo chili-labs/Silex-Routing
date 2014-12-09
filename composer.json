@@ -11,11 +11,8 @@
     ],
     "require": {
         "silex/silex": "~1.0",
-        "symfony/routing": ">=2.3,<2.6-dev",
+        "symfony/routing": "~2.3",
         "symfony-cmf/routing": "~1.0"
-    },
-    "require-dev": {
-        "satooshi/php-coveralls": "*"
     },
     "autoload": {
         "psr-0": { "SilexRouting": "src/" }

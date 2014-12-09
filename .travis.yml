@@ -1,26 +1,39 @@
 language: php
 
-env:
-    - SYMFONY_VERSION=2.3
-    - SYMFONY_VERSION=2.4
-    - SYMFONY_VERSION=2.5
-
-before_script:
-    - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
-    - composer install --prefer-source
-
-install:
-    - composer require symfony/symfony:${SYMFONY_VERSION}.*@dev --no-update
-
-script:
-    - phpunit --coverage-clover build/logs/clover.xml
-
-after_script:
-    - php vendor/bin/coveralls -v
-
 php:
     - 5.3
     - 5.4
     - 5.5
     - 5.6
     - hhvm
+
+before_install:
+    - composer require satooshi/php-coveralls --no-update
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.7' ]; then sed -i 's/~2.3/2.7.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3/2.6.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.5' ]; then sed -i 's/~2.3/2.5.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.4' ]; then sed -i 's/~2.3/2.4.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/~2.3/2.3.*@dev/g' composer.json; fi"
+
+install:
+    - composer install --prefer-source
+
+before_script:
+    - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/SilexRouting/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
+
+script:
+    - phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+    - php vendor/bin/coveralls -v
+
+matrix:
+    include:
+        - php: 5.6
+          env: SYMFONY_DEPS_VERSION=2.3
+        - php: 5.6
+          env: SYMFONY_DEPS_VERSION=2.4
+        - php: 5.6
+          env: SYMFONY_DEPS_VERSION=2.5
+        - php: 5.6
+          env: SYMFONY_DEPS_VERSION=2.7
