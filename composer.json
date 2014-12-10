@@ -11,11 +11,8 @@
     ],
     "require": {
         "silex/silex": "~2.0@dev",
-        "symfony/routing": ">=2.4,<2.6-dev",
+        "symfony/routing": "~2.4",
         "symfony-cmf/routing": "~1.0"
-    },
-    "require-dev": {
-        "satooshi/php-coveralls": "*"
     },
     "autoload": {
         "psr-4": { "ChiliLabs\\Silex\\": "src/" }
