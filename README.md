@@ -1,7 +1,12 @@
 # Silex-Routing
 ###### Serviceprovider for advanced and dynamic routing in Silex
 
-[![Latest Stable Version](https://poser.pugx.org/project-a/Silex-Routing/v/stable.png)](https://packagist.org/packages/project-a/Silex-Routing) [![Latest Unstable Version](https://poser.pugx.org/project-a/Silex-Routing/v/unstable.png)](https://packagist.org/packages/project-a/Silex-Routing) [![Total Downloads](https://poser.pugx.org/project-a/Silex-Routing/downloads.png)](https://packagist.org/packages/project-a/Silex-Routing) [![Build Status](https://secure.travis-ci.org/chili-labs/Silex-Routing.png?branch=master)](http://travis-ci.org/chili-labs/Silex-Routing) [![Coverage Status](https://coveralls.io/repos/chili-labs/Silex-Routing/badge.png?branch=master)](https://coveralls.io/r/chili-labs/Silex-Routing) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0b113487-3a34-4e79-aa1a-2ab607d6a9cd/mini.png)](https://insight.sensiolabs.com/projects/0b113487-3a34-4e79-aa1a-2ab607d6a9cd)
+[![Latest Stable Version](https://img.shields.io/packagist/v/project-a/silex-routing.svg?style=flat&label=stable)](https://packagist.org/packages/project-a/silex-routing)
+[![Total Downloads](https://img.shields.io/packagist/dt/project-a/silex-routing.svg?style=flat)](https://packagist.org/packages/project-a/silex-routing)
+[![License](https://img.shields.io/packagist/l/project-a/silex-routing.svg?style=flat)](https://packagist.org/packages/project-a/silex-routing)
+[![Build Status](https://secure.travis-ci.org/chili-labs/Silex-Routing.png?branch=master)](http://travis-ci.org/chili-labs/Silex-Routing)
+[![Coverage Status](https://img.shields.io/coveralls/chili-labs/Silex-Routing/master.svg?style=flat)](https://coveralls.io/r/chili-labs/Silex-Routing?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a/mini.png)](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a)
 
 ## Description
 
