@@ -11,7 +11,7 @@ php:
     - hhvm
 before_install:
     - composer require satooshi/php-coveralls --no-update
-    - sh -c "sed -i 's|silex\":\ \"~1.0|silex\":\ \"1.2.*@dev|g' composer.json"
+    - sh -c "sed -i 's|silex\":\ \"~1.0|silex\":\ \"1.3.*@dev|g' composer.json"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.8' ]; then sed -i 's/~2.3/2.8.*@dev/g' composer.json; fi"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3/2.7.*@dev/g' composer.json; fi"
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.6' ]; then sed -i 's/~2.3/2.6.*@dev/g' composer.json; fi"
