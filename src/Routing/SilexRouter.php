@@ -78,7 +78,7 @@ class SilexRouter implements RouterInterface
     /**
      * {@inheritdoc}
      */
-    public function generate($name, $parameters = array(), $referenceType = self::ABSOLUTE_PATH)
+    public function generate($name, $parameters = [], $referenceType = self::ABSOLUTE_PATH)
     {
         $generator = new UrlGenerator($this->getRouteCollection(), $this->getContext(), $this->logger);
 

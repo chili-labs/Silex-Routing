@@ -4,8 +4,6 @@ cache:
         - $HOME/.composer/cache/files
 language: php
 php:
-    - 5.3
-    - 5.4
     - 5.5
     - 5.6
     - hhvm
@@ -16,8 +14,6 @@ before_install:
     - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.7/2.7.*@dev/g' composer.json; fi"
 install:
     - composer install
-before_script:
-    - sh -c "if [ '${TRAVIS_PHP_VERSION:0:3}' = '5.3' ]; then sed -i 's~</whitelist>~<exclude><file>src/Application/RoutingTrait.php</file></exclude></whitelist>~g' phpunit.xml.dist; fi"
 script:
     - phpunit --coverage-clover build/logs/clover.xml
 after_success:

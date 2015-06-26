@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=5.5.9",
         "silex/silex": "~2.0@dev",
         "symfony/routing": "~2.7",
         "symfony-cmf/routing": "~1.0"
