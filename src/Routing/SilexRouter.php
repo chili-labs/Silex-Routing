@@ -20,7 +20,7 @@ use Symfony\Component\Routing\RouterInterface;
 
 /**
  * The default router, which matches/generates all the routes
- * add by the methods in Application
+ * add by the methods in Application.
  *
  * @author Daniel Tschinder <daniel@tschinder.de>
  */
