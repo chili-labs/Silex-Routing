@@ -18,7 +18,7 @@ use SilexRouting\Provider\UrlGeneratorServiceProvider;
 /**
  * @author Daniel Tschinder <daniel@tschinder.de>
  */
-class UrlGeneratorProviderTest extends \PHPUnit_Framework_TestCase
+class UrlGeneratorServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @return Application
