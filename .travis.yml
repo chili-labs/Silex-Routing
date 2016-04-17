@@ -11,10 +11,10 @@ php:
 before_install:
     - composer require satooshi/php-coveralls --no-update
     - sh -c "sed -i 's|silex\":\ \"~1.0|silex\":\ \"1.3.*@dev|g' composer.json"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.7' ]; then sed -i 's/~2.3|3.0.*/2.7.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3|3.0.*/3.0.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.8' ]; then sed -i 's/~2.3|3.0.*/2.8.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/~2.3|3.0.*/2.3.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.7' ]; then sed -i 's/~2.3|3.*/2.7.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.3|3.*/3.0.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.8' ]; then sed -i 's/~2.3|3.*/2.8.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '2.3' ]; then sed -i 's/~2.3|3.*/2.3.*@dev/g' composer.json; fi"
 install:
     - composer install
 before_script:
