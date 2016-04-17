@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/project-a/silex-routing.svg?style=flat&label=stable)](https://packagist.org/packages/project-a/silex-routing)
 [![Total Downloads](https://img.shields.io/packagist/dt/project-a/silex-routing.svg?style=flat)](https://packagist.org/packages/project-a/silex-routing)
 [![License](https://img.shields.io/packagist/l/project-a/silex-routing.svg?style=flat)](https://packagist.org/packages/project-a/silex-routing)
-[![Build Status](https://secure.travis-ci.org/chili-labs/Silex-Routing.png?branch=1.0)](http://travis-ci.org/chili-labs/Silex-Routing)
+[![Build Status](https://travis-ci.org/chili-labs/Silex-Routing.svg?branch=1.0)](https://travis-ci.org/chili-labs/Silex-Routing)
 [![Coverage Status](https://img.shields.io/coveralls/chili-labs/Silex-Routing/1.0.svg?style=flat)](https://coveralls.io/r/chili-labs/Silex-Routing?branch=1.0)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a/mini.png)](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a)
 
