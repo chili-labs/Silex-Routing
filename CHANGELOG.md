@@ -4,6 +4,7 @@ Changelog
 2.0.0 (2016-06-06)
 ------------
 
+* Requires PHP 5.5.9 or newer
 * Compatibility to Silex 2.0
 * Namespace changed from \SilexRouting to \ChiliLabs\Silex for all classes
 * Class SilexRouter moved to sub-namespace \ChiliLabs\Silex\Routing
