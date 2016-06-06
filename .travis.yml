@@ -10,9 +10,9 @@ php:
     - hhvm
 before_install:
     - composer require satooshi/php-coveralls --no-update
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '3.0' ]; then sed -i 's/~2.8|3.0.*/3.0.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '3.1' ]; then sed -i 's/~2.8|3.0.*/3.1.*@dev/g' composer.json; fi"
-    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2.8|3.0.*/2.8.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '3.0' ]; then sed -i 's/~2\.8|^3\.0/3.0.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '3.1' ]; then sed -i 's/~2\.8|^3\.0/3.1.*@dev/g' composer.json; fi"
+    - sh -c "if [ '$SYMFONY_DEPS_VERSION' = '' ]; then sed -i 's/~2\.8|^3\.0/2.8.*@dev/g' composer.json; fi"
 install:
     - composer install
 script:
