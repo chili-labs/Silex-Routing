@@ -34,11 +34,8 @@ Alternatively, you can download the [`silexrouting.zip`][1] file and extract it.
 
 #### Upgrade from 1.0 to 2.0
 
-***Please be aware that version 2.0 is still experimental and subject to change as
-long as Silex 2.0 is not stable.***
-
 Version 2 is not backward compatible with version 1. Make sure to carefully read
-the [upgrade instructions][2].
+the [changelog][2].
 
 ## Usage
 
@@ -75,4 +72,4 @@ To run the test suite, you need [composer](http://getcomposer.org).
 Silex-Routing is licensed under the MIT license.
 
 [1]: https://github.com/chili-labs/Silex-Routing/archive/master.zip
-[2]: https://github.com/chili-labs/Silex-Routing/blob/master/UPGRADE-2.0.md
+[2]: https://github.com/chili-labs/Silex-Routing/blob/master/CHANGELOG.md
