@@ -14,11 +14,12 @@ namespace ChiliLabs\Silex\Tests\Application;
 use ChiliLabs\Silex\Provider\RoutingServiceProvider;
 use ChiliLabs\Silex\Routing\SilexRouter;
 use ChiliLabs\Silex\Tests\TestData\Application;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Daniel Tschinder <daniel@tschinder.de>
  */
-class RoutingTraitTest extends \PHPUnit_Framework_TestCase
+class RoutingTraitTest extends TestCase
 {
     /**
      * @return Application

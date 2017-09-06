@@ -13,13 +13,14 @@ namespace ChiliLabs\Silex\Tests\Routing;
 
 use ChiliLabs\Silex\Provider\RoutingServiceProvider;
 use ChiliLabs\Silex\Routing\SilexRouter;
+use PHPUnit\Framework\TestCase;
 use Silex\Application;
 use Symfony\Component\Routing\RequestContext;
 
 /**
  * @author Daniel Tschinder <daniel@tschinder.de>
  */
-class SilexRouterTest extends \PHPUnit_Framework_TestCase
+class SilexRouterTest extends TestCase
 {
     /**
      * @param RequestContext $context
