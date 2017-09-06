@@ -8,6 +8,8 @@
 [![Coverage Status](https://img.shields.io/coveralls/chili-labs/Silex-Routing/master.svg?style=flat)](https://coveralls.io/r/chili-labs/Silex-Routing?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a/mini.png)](https://insight.sensiolabs.com/projects/5aad6289-fd8d-4dac-9472-fb02428a9f0a)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/napKqUy7ZTEunMtesQZm9ygE/chili-labs/Silex-Routing'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/napKqUy7ZTEunMtesQZm9ygE/chili-labs/Silex-Routing.svg' /></a>
+
 ## Description
 
 Silex-Routing allows you to define custom and multiple routers for Silex. This is
