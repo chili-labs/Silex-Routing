@@ -71,7 +71,5 @@ To run the test suite, you need [composer](http://getcomposer.org).
 
 Silex-Routing is licensed under the MIT license.
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/napKqUy7ZTEunMtesQZm9ygE/chili-labs/Silex-Routing'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/napKqUy7ZTEunMtesQZm9ygE/chili-labs/Silex-Routing.svg' /></a>
-
 [1]: https://github.com/chili-labs/Silex-Routing/archive/master.zip
 [2]: https://github.com/chili-labs/Silex-Routing/blob/master/CHANGELOG.md
